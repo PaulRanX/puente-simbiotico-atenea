@@ -1,0 +1,56 @@
+openapi: 3.0.1
+info:
+  title: Atenea Puente Operativo
+  description: Plugin para enviar datos simbólicos desde Atenea hacia un microservidor conectado a n8n.
+  version: 1.0.0
+servers:
+  - url: https://puente-simbiotico-atenea.onrender.com
+paths:
+  /atenea/puente:
+    post:
+      operationId: enviarSimbolo
+      summary: Envía datos simbólicos a n8n
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Simbolo"
+      responses:
+        "200":
+          description: Datos enviados correctamente a n8n
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  recibido:
+                    type: object
+components:
+  schemas:
+    Simbolo:
+      type: object
+      properties:
+        tipo:
+          type: string
+          example: anexo
+        memoria:
+          type: string
+          example: Facely
+        titulo:
+          type: string
+          example: Anexo Propósito
+        descripcion:
+          type: string
+          example: Documento simbólico sobre visión emocional
+        archivo_drive_id:
+          type: string
+          example: DEMO123456
+        origen:
+          type: string
+          example: Facely
+        timestamp:
+          type: string
+          example: 2025-04-04T01:12:00Z
