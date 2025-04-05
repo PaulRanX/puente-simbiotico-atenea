@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Atenea Puente Operativo",
+  "name_for_model": "atenea_puente",
+  "description_for_human": "Conecta a Atenea con n8n para ejecutar flujos simbólicos reales.",
+  "description_for_model": "Usa este plugin para enviar datos simbólicos como anexos, activaciones o instrucciones hacia un webhook externo.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://puente-simbiotico-atenea.onrender.com/openapi.yaml"
+  },
+  "logo_url": "https://puente-simbiotico-atenea.onrender.com/logo.png",
+  "contact_email": "randhy@planlibertad.org",
+  "legal_info_url": "https://planlibertad.org/legal"
+}
